@@ -1,3 +1,8 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import { App } from './lib/app';
+console.log('<----- Extension script started running ----->');
 
-new App().render();
+(async () => {
+  await new App().render();
+})();

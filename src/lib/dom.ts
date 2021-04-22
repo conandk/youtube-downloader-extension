@@ -10,5 +10,13 @@ export function renderDateTime() {
   headingTime.innerText = time;
   headingDate.style.color = palette;
   headingTime.style.color = palette;
-  root.style.backgroundImage = `url('images/${period}.png')`;
+  // root.style.backgroundImage = `url('images/${period}.png')`;
+}
+
+export function renderYoutubeDownloader() {
+  const root = document.getElementById('root');
+  root.style.width = '400px';
+  root.style.height = '150px';
+  const { host, href } = window.location;
+  root.innerText = `Current host: ${host}`;
 }

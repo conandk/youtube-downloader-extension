@@ -1,48 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PerfWatch</title>
   <style>
     body {
-      margin: 0
+      padding: 0;
+      margin: 0;
+      font-family: 'Bebas Neue', cursive;
     }
 
-    .root {
-      height: 100px;
-      width: 240px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+    .main-container {
+      min-width: 445px;
+      min-height: fit-content;
+      background-color: black;
+      color: white;
     }
 
-    .root__wrapper {
-      width: 100%;
+    .section-title {
+      padding: 6px 0;
+      margin: 0;
+      margin-left: 4px;
       text-align: center;
+      opacity: 0.6;
+      font-size: 15px;
     }
 
-    .root__wrapper__h2 {
-      margin-top: 0;
-      margin-bottom: 0;
+    .perf-tile {
+      display: flex;
+      padding: 5px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-left: 8px;
     }
 
-    .root__wrapper__h3 {
-      margin-top: 5px;
-      margin-bottom: 0;
+    .metric-tile {
+      background-color: green;
+      width: 100px;
+      height: 60px;
+      padding: 1px;
+      position: relative;
+      margin-bottom: 6px;
+      margin-right: 6px;
+    }
+
+    .metric-caption {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      opacity: 0.6;
+      font-weight: 700;
+    }
+
+    .metric-value {
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .metric-ms {
+      opacity: 0.8;
+      font-size: 16px;
     }
   </style>
 </head>
 
 <body>
-  <div class="root" id="root">
-    <div class="root__wrapper">
-      <h2 class="root__wrapper__h2" id="date"></h2>
-      <h3 class="root__wrapper__h3" id="time"></h3>
-    </div>
-  </div>
+<div class='main-container'>
+  <p class='section-title'>Youtube Downloader</p>
 
-  <script src="js/popup.js"></script>
+  <div class='perf-tile' id='download-section'>
+  </div>
+</div>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<script src="vendor.js"></script>
+<script src="popup.js"></script>
 </body>
 
 </html>
